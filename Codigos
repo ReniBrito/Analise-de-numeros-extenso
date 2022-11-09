@@ -1,0 +1,18 @@
+num  = ('Zero', 'Um', 'Dois', 'Tres', 'Quatro', 'Cinco',
+        'Seis', 'Sete', 'Oito', 'Nove', 'Dez')
+while True:
+        while True:
+                digite = int(input('Digite um numero entre 1 a 10 '))
+                if 0 <= digite <=10:
+                        break
+                print('\033[0;31mERRO!, digite apenas numeros entre 1 a 10\033[m')
+        print(f'Você digitou o numero {num[digite]}')
+
+        resposta = str(input('Quer continuar? [s/n]')).strip().lower()[0]
+
+        while resposta not in 'sn':
+                print('\033[0;31mPor favor digite apenas "s" ou "n"\033[m')
+                resposta = str( input( 'Quer continuar? [s/n]' ) ).strip().lower()[0]
+        if resposta == 'n':
+                break
+print('Obrigado volte sempre!')
